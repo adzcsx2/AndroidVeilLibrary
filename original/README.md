@@ -22,31 +22,6 @@ An easy, flexible way to implement veil skeletons and shimmering effect for Andr
 <img src="https://github.com/skydoves/AndroidVeil/blob/master/art/shimmer02.gif" width="32%"/>
 </p>
 
-# 兼容低版kotlin
-
-### 基于1.1.2修改
-增加了默认配置文件，更方便使用
-
-### setting.gradle
-
-```
-include ':skeleton_veil_lib'
-```
-
-### Useage
-
-```
-        <com.skydoves.androidveil.VeilRecyclerFrameView
-            android:id="@+id/veilRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:veilFrame_layout="@layout/item_resident_information" />
-
-```
-
-
-# 原版README
-
 ## Download
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.skydoves/androidveil.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.skydoves%22%20AND%20a:%22androidveil%22)
 

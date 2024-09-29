@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            buildConfigField("boolean", "isRelease", "true")
+        }
+        debug {
+            buildConfigField("boolean", "isRelease", "false")
+        }
+        dev {
+            buildConfigField("boolean", "isRelease", "false")
+        }
+        pre {
+            buildConfigField("boolean", "isRelease", "false")
+        }
+    }
+}
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':ybase')
+    api "com.facebook.shimmer:shimmer:0.5.0"
+}
+
