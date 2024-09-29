@@ -34,6 +34,7 @@ include ':skeleton_veil_lib'
 ```
 
 ### Useage
+第一次使用需要修改build.gradle->compileSdkVersion以适配项目
 
 ```
         <com.skydoves.androidveil.VeilRecyclerFrameView
